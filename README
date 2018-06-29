@@ -1,0 +1,21 @@
+----------
+usage:
+Double click servicePortBlocker.bat, or
+ type servicePortBlocker at the command line.
+To stop it, close the window which opens.
+----------
+servicePortBlocker is a Java/Groovy app.
+
+It starts an extremely minimal server which listens on the port
+ identified in servicePortBlocker.groovy.
+
+The server does nothing with any requests it receives.
+It sends nothing back to anything which contacts it.
+It simply occupies a port on your system, blocking any other servers
+ from binding to that port.
+
+This can be useful when running Grails functional tests against a
+ server on a different machine because it prevents Grails from
+ starting a server on the local machine.
+When running an application such as CCSDAS, this saves a LOT of time at
+ application startup, thus considerably shortening the feedback loop.
